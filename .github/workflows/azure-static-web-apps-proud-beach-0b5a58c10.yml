@@ -7,10 +7,11 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 env:
   AZURE_WEBAPP_NAME: otm-missionaries-app
-  NODE_VERSION: '20'
+  NODE_VERSION: '22'
 
 jobs:
   build:
