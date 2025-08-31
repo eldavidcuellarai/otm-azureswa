@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analyze": "npx vite-bundle-analyzer",
+    "typecheck": "tsc --noEmit",
+    "build:analyze": "vite build --mode analyze"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
