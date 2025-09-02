@@ -7,12 +7,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     react({
-      jsxRuntime: 'automatic',
-      babel: {
-        plugins: [
-          ['babel-plugin-react-compiler', {}]
-        ]
-      }
+      jsxRuntime: 'automatic'
     }),
     tailwindcss()
   ],
@@ -23,7 +18,7 @@ export default defineConfig({
   },
   base: './',
   build: {
-    minify: 'terser',
+    minify: 'esbuild',
     sourcemap: false,
     target: 'es2020',
     cssCodeSplit: true,
@@ -35,8 +30,7 @@ export default defineConfig({
           'vendor-radix': [
             '@radix-ui/react-dialog',
             '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-button'
+            '@radix-ui/react-avatar'
           ],
           'vendor-ui': [
             'framer-motion',
